@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5fb;
+  color: #202944;
+}
+
+.container {
+  width: min(720px, 92%);
+  margin: 40px auto;
+}
+
+header {
+  background: #253b80;
+  color: white;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+header h1 {
+  margin: 10px 0;
+  font-size: 32px;
+}
+
+header p {
+  line-height: 1.5;
+}
+
+.tag {
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stat, .panel {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #1725540d;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  color: #344fc1;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stat p {
+  font-size: 13px;
+}
+
+.panel {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 19px;
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d6dbea;
+  border-radius: 8px;
+  font: inherit;
+  background: white;
+}
+
+button {
+  background: #344fc1;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font: inherit;
+}
+
+form button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+button:hover {
+  background: #253b80;
+}
+
+.task-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.task-heading select {
+  width: auto;
+  max-width: 150px;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  border: 1px solid #e0e5f0;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+
+.task p {
+  margin: 8px 0;
+  color: #606b83;
+  font-size: 14px;
+}
+
+.task.done strong {
+  text-decoration: line-through;
+  color: #738096;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.task-actions button {
+  font-size: 13px;
+  padding: 9px 12px;
+}
+
+.delete {
+  background: #b83246;
+}
+
+.delete:hover {
+  background: #8e2032;
+}
+
+#emptyMessage {
+  color: #606b83;
+  font-size: 14px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #606b83;
+  font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .summary {
+    gap: 7px;
+  }
+
+  .stat, .panel {
+    padding: 13px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+}

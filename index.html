@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="tag">STUDENT PRODUCTIVITY</p>
+      <h1>My Study Planner</h1>
+      <p>Plan your study sessions, one task at a time.</p>
+    </header>
+
+    <section class="summary">
+      <div class="stat">
+        <span id="total">0</span>
+        <p>Total tasks</p>
+      </div>
+      <div class="stat">
+        <span id="pending">0</span>
+        <p>Pending</p>
+      </div>
+      <div class="stat">
+        <span id="completed">0</span>
+        <p>Completed</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Add a study task</h2>
+      <form id="taskForm">
+        <label for="taskName">Task name</label>
+        <input id="taskName" type="text"
+          placeholder="e.g. Practise C programming" required>
+
+        <label for="subject">Subject</label>
+        <input id="subject" type="text"
+          placeholder="e.g. PPS" required>
+
+        <label for="deadline">Deadline</label>
+        <input id="deadline" type="date" required>
+
+        <button type="submit">+ Add task</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="task-heading">
+        <h2>My tasks</h2>
+        <select id="filter" aria-label="Filter tasks">
+          <option value="all">All tasks</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <p id="emptyMessage">No tasks yet. Add your first study task!</p>
+      <ul id="taskList"></ul>
+    </section>
+
+    <footer>Made by me · My first CSE project</footer>
+  </main>
+</body>
+</html>
